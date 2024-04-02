@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat",sans-serif;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #1f143d;
+}
+
+/*Style Header & Navbar*/
+
+header .top_bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1f143d;
+    padding: 0 5%;
+}
+
+.menu-burger{
+    position: relative;
+    height: 25px;
+    display: none;
+}
+
+.nom{
+    font-size: 2.2rem;
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.panier:hover{
+    filter: drop-shadow(0px 0px 5px #71d6f5);
+}
+
+.nav_bar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    list-style: none;
+}
+
+.nav_bar a{
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 3rem;
+}
+
+.nav_bar a:hover{
+    text-shadow: #71d6f5 0 0 12px;
+}
+
+/*Style Main*/
+
+main{
+    width: 80%;
+    height: 1500px;
+    background-color: red;
+    margin: 0 auto;
+}
+
+/*Style footer*/
+
+/*Responsive*/
+
+@media only screen and (max-width : 1224px) {
+    .menu-burger{
+        display: block;
+        position: absolute;
+        top: 52px;
+        left: 50px;
+    }
+
+    .logo{
+        transform: scale(0.4);
+        margin-left: 30px;
+    }
+
+    .nom{
+        font-size: 1rem;
+        margin-right: 0;
+    }
+
+    .panier{
+        transform: scale(0.3);
+    }
+
+    .nav_bar{
+        display: none;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .menu-burger{
+        display: block;
+        position: absolute;
+        top: 52px;
+        left: 35px;
+    }
+
+    .logo{
+        transform: scale(0.3);
+        float: left;
+
+    }
+
+    .nom{
+        position: relative;
+        font-size: 0.4rem;
+    }
+
+    .panier{
+        transform: scale(0.3);
+    }
+
+    .nav_bar{
+        display: none;
+    }
+}
