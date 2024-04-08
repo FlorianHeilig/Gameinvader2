@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat",sans-serif;
+    text-decoration: none;
 }
 
 html{
@@ -53,10 +55,11 @@ header .top_bar{
 
 #nav_bar a{
     color: #ffffff;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     text-decoration: none;
     margin: 0 3rem;
+    font-family: "Quantico", sans-serif;
 }
 
 #nav_bar a:hover{
@@ -68,20 +71,147 @@ header .top_bar{
     cursor: pointer;
     font-size: 20px;
 }
+
 /*Style Main*/
 
 main{
-    width: 80%;
-    height: 1500px;
-    background-color: red;
-    margin: 0 auto;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titre_section{
+    display: inline-block;
+    margin-top: 35px;
+}
+
+.titre_section strong{
+    color: #ffffff;
+    background-color: #0c0020;
+    padding: 6px 16px;
+    font-family: "Quantico", sans-serif;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    border: 1px solid rgba(142, 212, 233, 0.697);
+    box-shadow: 0 0 9px rgba(142, 212, 233, 0.697),
+    inset 0 0 5px rgba(142, 212, 233, 0.697);
+}
+
+.grille{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 20%;
+    justify-content: space-between;
+    gap: 20px 10px;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    transform: scale();
+}
+
+.item img{
+    height: 420px;
+    border-radius: 5px;
+    margin-top: 35px;
+}
+
+.item img:hover{
+    transition: transform ease-in-out .3s;
+    transform: scale(1.04);
+}
+
+.item_info{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 297.95px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #0c0020;
+    margin-top: 15px;
+}
+
+.item_info a, span, button{
+    color: #ffffff;
+}
+
+.item_info a{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.item_info a:hover{
+    text-decoration: underline;
+}
+
+.item_info span{
+    margin: auto 0 10px 0;
+    padding: 7px 0 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+.item_info button{
+    background-color: #16cc8f;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.item_info button:hover{
+    background-color: #1cd094;
 }
 
 /*Style footer*/
 
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    margin-top: 70px;
+    padding: 70px;
+    background-color: #0c0020;
+    color: #ffffff;
+}
+
+.footer_list{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 20px 0;
+}
+
+.footer_list a{
+    color: #ffffff;
+}
+
+.footer_list h3{
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+.footer_list li, a, p{
+    list-style: none;
+    font-size: 1.3rem;
+    padding: 5px;
+}
+
+.footer_list .phone::before{
+    content: "\2706";
+}
+
+.footer_list li, a:hover{
+    color: rgba(255, 255, 255, 0.8);
+}
 /*Responsive*/
 
 @media only screen and (max-width : 1224px) {
+
+    /*Style Header & Navbar*/
+
     #icons{
         display: block;
     }
@@ -137,9 +267,35 @@ main{
         left: 0;
         transition: 0.25s;
     }
+
+    /*Style Main*/
+
+    .titre_section strong{
+        font-size: 1.5rem;
+    }
+
+    /*Style Footer*/
+
+    .centre{
+        border-color: #1f143d;
+        border-style: solid;
+        border-width: 1px 0;
+    }
+
+    .footer_list h2, li, a, p{
+        font-size: 0.7rem;
+    }
+
+    footer, .centre{
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    
+    /*Style Header & Navbar*/
+
     #icons{
         display: block;
     }
@@ -183,5 +339,27 @@ main{
     #nav_bar.active{
         left: 0;
         transition: 0.25s;
+    }
+
+    /*Style Main*/
+
+    .titre_section{
+        text-align: center;
+    }
+
+    .titre_section strong{
+        font-size: 1.3rem;
+    }
+
+    
+    /*Style Footer*/
+
+    footer{
+        flex-direction: column;
+    }
+
+    .footer_list h2, li, a, p{
+        font-size: 0.5rem;
+        align-items: center;
     }
 }
