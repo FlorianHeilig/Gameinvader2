@@ -20,6 +20,12 @@ body{
 
 /*Style Header & Navbar*/
 
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
 header .top_bar{
     display: flex;
     align-items: center;
@@ -51,6 +57,7 @@ header .top_bar{
     justify-content: center;
     padding: 15px 0;
     list-style: none;
+    background-color: #1f143d;
 }
 
 #nav_bar a{
@@ -73,11 +80,17 @@ header .top_bar{
 }
 
 /*Style Main*/
-
 main{
     width: 70%;
+    max-width: 52%;
     margin-left: auto;
     margin-right: auto;
+    z-index: 1;
+}
+
+.main_top{
+    display: flex;
+    justify-content: center;
 }
 
 .titre_section{
@@ -109,6 +122,7 @@ main{
     display: flex;
     flex-direction: column;
     transform: scale();
+    margin-bottom: 50px;
 }
 
 .item img{
@@ -164,6 +178,46 @@ main{
     background-color: #1cd094;
 }
 
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    width: 100%;
+    left: 0;
+}
+
+.pagination ul{
+    display: flex;
+    list-style: none;
+}
+
+.pagination ul li{
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    background-color: #180d38;
+}
+
+.pagination ul li:hover{
+    border-color: #1979c3;
+    background-color: #1979c3;
+    transition: 0.5ms;
+}
+
+.pagination ul li.active{
+    border-color: #1979c3;
+    background-color: #1979c3;
+}
+
 /*Style footer*/
 
 footer{
@@ -171,7 +225,6 @@ footer{
     justify-content: space-evenly;
     width: 100%;
     height: auto;
-    margin-top: 70px;
     padding: 70px;
     background-color: #0c0020;
     color: #ffffff;
@@ -270,6 +323,22 @@ footer{
 
     /*Style Main*/
 
+    main{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .main_top{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .grille{
+        justify-content: center;
+    }
+
     .titre_section strong{
         font-size: 1.5rem;
     }
@@ -343,14 +412,20 @@ footer{
 
     /*Style Main*/
 
+    main{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
+    }
+
     .titre_section{
         text-align: center;
     }
 
     .titre_section strong{
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
-
     
     /*Style Footer*/
 
