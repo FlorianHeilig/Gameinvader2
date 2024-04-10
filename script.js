@@ -1,4 +1,4 @@
-const li = document.querySelectorAll("nav li")
+const li = document.querySelectorAll(".nav_bar li a")
 
 icons.addEventListener("click", () => {
     nav_bar.classList.toggle("active")
@@ -13,3 +13,16 @@ li.forEach((li) =>{
         nav_bar.classList.remove("active")
     })
 })
+
+
+let link = document.getElementsByClassName("link")
+
+let currentValue = 1
+
+function activeLink (){
+    for(l of link){
+        l.classList.remove("active")
+    }
+    event.target.classList.add("active")
+    currentValue = event.target.value
+}

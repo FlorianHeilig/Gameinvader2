@@ -57,7 +57,7 @@ header .top_bar{
     justify-content: center;
     padding: 15px 0;
     list-style: none;
-    background-color: #1f143d;
+    background-color: #271e46;
 }
 
 #nav_bar a{
@@ -82,8 +82,7 @@ header .top_bar{
 /*Style Main*/
 main{
     width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 35px auto 35px auto;
     z-index: 1;
 }
 
@@ -185,7 +184,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding-top: 20px;
     width: 100%;
     left: 0;
 }
@@ -207,12 +206,12 @@ main{
     border-color: rgba(255, 255, 255, 0.5);
     color: #ffffff;
     background-color: #180d38;
+    transition: background-color 600ms;
 }
 
 .pagination ul li:hover{
     border-color: #1979c3;
     background-color: #1979c3;
-    transition: 0.5ms;
 }
 
 .pagination ul li.active{
@@ -228,7 +227,6 @@ footer{
     width: 100%;
     height: auto;
     padding: 70px;
-    margin-top: 35px;
     background-color: #0c0020;
     color: #ffffff;
 }
@@ -259,7 +257,7 @@ footer{
     content: "\2706";
 }
 
-.footer_list li, a:hover{
+.footer_list li, .footer_list a:hover{
     color: rgba(255, 255, 255, 0.8);
 }
 /*Responsive*/
@@ -268,6 +266,7 @@ footer{
     .item img{
         height: 360px;
     }
+    
     .item_info a{
         font-size: 1rem;
     }
@@ -277,6 +276,7 @@ footer{
     .item img{
         height: 320px;
     }
+
     .item_info a{
         font-size: 0.9rem;
     }
@@ -286,6 +286,7 @@ footer{
     .item img{
         height: 280px;
     }
+
     .item_info a{
         font-size: 0.8rem;
     }
@@ -295,9 +296,15 @@ footer{
     .item img{
         height: 240px;
     }
+
+    .item_info{
+        height: 200px;
+    }
+
     .item_info a{
         font-size: 0.7rem;
     }
+
     .item_info button{
         font-size: 0.6rem;
     }
@@ -307,12 +314,17 @@ footer{
     .item img{
         height: 220px;
     }
+
+    .item_info{
+        height: 180px;
+    }
+
     .item_info a{
         font-size: 0.5rem;
     }
 }
 
-@media only screen and (max-width : 1224px) {
+@media only screen and (max-width : 1240px) {
 
     /*Style Header & Navbar*/
 
@@ -354,7 +366,8 @@ footer{
         background-color: #0c0020;
         position: fixed;
         top: 0;
-        left: -100%
+        left: -100%;
+        transition: 250ms;
     }
 
     #nav_bar ul{
@@ -369,15 +382,15 @@ footer{
 
     #nav_bar.active{
         left: 0;
-        transition: 0.25s;
+        transition: 250ms;
     }
 
     /*Style Main*/
 
     main{
         width: 80%;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .main_top{
@@ -388,6 +401,14 @@ footer{
 
     .grille{
         justify-content: center;
+    }
+
+    .item_info{
+        height: 150px;
+    }
+
+    .item img{
+        height: 250px;
     }
 
     .titre_section strong{
@@ -409,6 +430,20 @@ footer{
     footer, .centre{
         align-items: center;
         flex-direction: column;
+    }
+}
+
+@media only screen and (max-width : 610px){
+    .item img{
+        height: 180px;
+    }
+
+    .item_info{
+        height: 180px;
+    }
+
+    .item_info a{
+        font-size: 0.5rem;
     }
 }
 
@@ -478,6 +513,22 @@ footer{
         font-size: 1rem;
     }
 
+    .item img{
+        height: 140px;
+    }
+
+    .item_info a{
+        font-size: 0.4rem;
+    }
+
+    .item_info span{
+        font-size: 0.7rem;
+    }
+
+    .item_info button{
+        font-size: 0.4rem;
+    }
+
     .pagination ul li{
         height: 25px;
         width: 25px;
@@ -490,8 +541,8 @@ footer{
         flex-direction: column;
     }
 
-    .footer_list h2, li, a, p{
-        font-size: 0.5rem;
+    .footer_list h3, li, a, p{
+        font-size: 0.8rem;
         align-items: center;
     }
 }
