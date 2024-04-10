@@ -180,6 +180,11 @@ td{
     margin: 70px 0;
 }
 
+.description hr{
+    margin-bottom: 70px;
+    border: 2px solid #271e46;
+}
+
 .description iframe{
     width: 70%;
     margin-left: auto;
