@@ -93,6 +93,7 @@ main{
 
 .top_produit{
     display: flex;
+    justify-content: center;
 }
 
 .top_produit .images img{
@@ -100,7 +101,7 @@ main{
 }
 
 .top_produit .images img{
-    height: 600px;
+    height: 700px;
 }
 
 .presentation{
@@ -155,7 +156,7 @@ td{
     border-radius: 50px;
     font-size: 1rem;
     width: 200px;
-    margin-left: 45%;
+    margin-left: 20%;
     border: none;
     cursor: pointer;
 }
@@ -169,6 +170,40 @@ td{
     font-weight: 500;
     text-transform: uppercase;
     padding: 10px;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+    margin: 70px 0;
+}
+
+.description iframe{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description p{
+   padding: 30px 30px 0px 30px;
+   background-image: #0c0020;
+}
+
+.description .titre_description{
+    display: flex;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    border-radius: 15px;
+    margin: 30px auto auto;
+    padding: 30px;
+    height: 30px;
+    width: 40%;
+    border: 1px solid #fff;
 }
 
 .titre_section{
@@ -410,6 +445,12 @@ footer{
 }
 
 @media only screen and (max-width : 1350px){
+    
+    iframe{
+        height: 80%;
+        width: auto;
+    }
+    
     .item img{
         height: 220px;
     }
@@ -502,6 +543,15 @@ footer{
         justify-content: center;
     }
 
+    .description .titre_description{
+        font-size: 1rem;
+    }
+
+    iframe{
+        height: 85%;
+        width: auto;
+    }
+
     .item_info{
         height: 150px;
     }
@@ -533,12 +583,22 @@ footer{
 }
 
 @media only screen and (max-width : 610px){
-    .images img{
+
+    .top_produit .images img{
         height: 600px;
     }
 
     .presentation h2 {
         font-size: 2.6rem;
+    }
+
+    .description .titre_description{
+        font-size: 0.7rem;
+    }
+
+    iframe{
+        height: 80%;
+        width: auto;
     }
 
     th{
@@ -558,6 +618,16 @@ footer{
     }
 
     .item_info a{
+        font-size: 0.5rem;
+    }
+}
+
+@media only screen and (max-width : 500px){
+    .top_produit .images img{
+        height: 380px;
+    }
+
+    .description .titre_description{
         font-size: 0.5rem;
     }
 }
@@ -620,8 +690,13 @@ footer{
         z-index: 1;
     }
 
-    .images img{
-        height: 420px;
+    .top_produit .images img{
+        height: 330px;
+    }
+
+    iframe{
+        height: 50%;
+        width: auto;
     }
 
     th{
@@ -670,6 +745,7 @@ footer{
 
     footer{
         flex-direction: column;
+        padding: 50px;
     }
 
     .footer_list h3, li, a, p{
