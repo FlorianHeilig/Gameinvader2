@@ -91,6 +91,86 @@ main{
     justify-content: center;
 }
 
+.top_produit{
+    display: flex;
+}
+
+.top_produit .images img{
+    border-radius: 20px;
+}
+
+.top_produit .images img{
+    height: 600px;
+}
+
+.presentation{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    color: #ffffff;
+}
+.presentation h2{
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+table{
+    background-color: #0c0020;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+th{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+td{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+ td,th{
+    border: 1px solid #271e46;
+    padding: 8px 10px;
+}
+
+.prix{
+    display: flex;
+    margin: 40px 0;
+    justify-content: center;
+}
+
+.prix span{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.prix button{
+    background-color: #16cc8f;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 1rem;
+    width: 200px;
+    margin-left: 45%;
+    border: none;
+    cursor: pointer;
+}
+
+.prix button:hover{
+    background-color: #1cd094;
+}
+
+.info tr th{
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
 .titre_section{
     display: inline-block;
     margin: 35px 0 ;
@@ -152,6 +232,7 @@ main{
 
 .item_info a{
     text-transform: uppercase;
+    font-weight: 700;
     font-size: 1.2rem;
     width: auto;
 }
@@ -293,6 +374,24 @@ footer{
 }
 
 @media only screen and (max-width : 1550px){
+    .top_produit{
+        flex-direction: column;
+    }
+    
+    .presentation{
+        margin: 20px 0 0 0; 
+    }
+
+    .images{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .images img{
+        margin: 0 0 0 0;
+    }
+
     .item img{
         height: 240px;
     }
@@ -434,6 +533,22 @@ footer{
 }
 
 @media only screen and (max-width : 610px){
+    .images img{
+        height: 600px;
+    }
+
+    .presentation h2 {
+        font-size: 2.6rem;
+    }
+
+    th{
+        font-size: 1.3rem;
+    }
+    
+    td{
+        font-size: 0.9rem;
+    }
+    
     .item img{
         height: 180px;
     }
@@ -503,6 +618,22 @@ footer{
         margin-left: auto;
         margin-right: auto;
         z-index: 1;
+    }
+
+    .images img{
+        height: 420px;
+    }
+
+    th{
+        font-size: 0.6rem;
+    }
+    
+    td{
+        font-size: 0.2rem;
+    }
+
+    .presentation h2 {
+        font-size: 2.4rem;
     }
 
     .titre_section{
