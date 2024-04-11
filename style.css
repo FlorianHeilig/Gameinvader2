@@ -91,6 +91,10 @@ main{
     justify-content: center;
 }
 
+.main_top .images img{
+    border-radius: 15px;
+}
+
 .top_produit{
     display: flex;
     justify-content: center;
@@ -544,6 +548,10 @@ footer{
         flex-direction: column;
     }
 
+    .main_top .images img{
+        height: 330px;
+    }
+
     .grille{
         justify-content: center;
     }
@@ -588,6 +596,10 @@ footer{
 }
 
 @media only screen and (max-width : 610px){
+
+    .main_top .images img{
+        height: 250px;
+    }
 
     .top_produit .images img{
         height: 600px;
@@ -693,6 +705,10 @@ footer{
         margin-left: auto;
         margin-right: auto;
         z-index: 1;
+    }
+
+    .main_top .images img{
+        height: 180px;
     }
 
     .top_produit .images img{
